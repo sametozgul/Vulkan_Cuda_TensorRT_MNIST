@@ -28,7 +28,6 @@ endif()
 
 # Find required packages
 set(CMAKE_PREFIX_PATH "/home/samo/KTX-Software/build")
-find_package(OpenCV REQUIRED)
 find_package(glfw3 3.3 REQUIRED)
 find_package(glm REQUIRED)
 find_package(Vulkan REQUIRED)
@@ -72,7 +71,7 @@ target_compile_options(Cuda_Vulkan_Interop PRIVATE
 target_compile_features(Cuda_Vulkan_Interop PRIVATE cxx_std_20)
 # Include paths
 target_include_directories(Cuda_Vulkan_Interop PUBLIC
-    ${OpenCV_INCLUDE_DIRS}
+    
     vulkan window imgui include tinygltf model tools cuda Common tensorrt utils
     ${KTX_INCLUDE_DIR} ${CUDAToolkit_INCLUDE_DIRS}
 )
@@ -83,7 +82,6 @@ target_link_libraries(Cuda_Vulkan_Interop
     glm::glm
     Vulkan::Vulkan
     ${KTX_LIBRARY}
-    ${OpenCV_LIBS}
     ${CUDA_LIBRARIES}
     ${NVINFER_LIB}
     ${NVONNXPARSER_LIB}
