@@ -64,25 +64,8 @@ The processed image is then passed to NVIDIA TensorRT, a high-performance deep l
 - **C++ Compiler:** Supporting C++17 or newer
 - **GLFW:** (for window/context management)
 - **NVIDIA GPU:** Pascal (GTX 10xx) or newer with Vulkan and CUDA support
-- **Operating System:** Linux (tested), Windows (should work with minor changes)
+- **Operating System:** Linux (tested)
 
-### How to Check Installed Versions
-
-- **Vulkan:**  
-  ```sh
-  vulkaninfo | grep "Vulkan Instance Version"
-  ```
-- **CUDA:**  
-  ```sh
-  nvcc --version
-  ```
-- **TensorRT:**  
-  ```sh
-  dpkg -l | grep tensorrt   # On Ubuntu with deb install
-  # or check header: cat /usr/include/x86_64-linux-gnu/NvInferVersion.h
-  ```
-
----
 
 **Make sure your driver and runtime versions are compatible with your hardware and each other.**
 ---
