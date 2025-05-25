@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+61cc707ed4ffde8e401fd5d341b67679 CMakeFiles/Shaders
+61cc707ed4ffde8e401fd5d341b67679 CMakeFiles/Tensors
+61cc707ed4ffde8e401fd5d341b67679 CMakeFiles/Textures
